@@ -1,0 +1,6 @@
+{
+  "name": "Ruhanivexa Social",
+  "description": "Royal Galaxy Edition — Your World • Your People • Your Stories. Premium celestial social universe with living digital worlds, constellation discovery, orbital co-labs, and privacy-first messaging.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

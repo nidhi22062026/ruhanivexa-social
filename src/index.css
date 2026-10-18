@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --midnight: #101014;
+    --aubergine: #291536;
+    --ultraviolet: #7650C8;
+    --gold: #E7C77A;
+    --ivory: #F7F4EF;
+    --starlight: #9A72F6;
+  }
+
+  body {
+    background-color: #101014;
+    color: #F7F4EF;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, .font-royal {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.05em;
+  }
+
+  .font-tech {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+/* Cosmic Glow & Glass Utilities */
+.royal-glass {
+  background: linear-gradient(135deg, rgba(41, 21, 54, 0.6) 0%, rgba(16, 16, 20, 0.8) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(118, 80, 200, 0.25);
+}
+
+.royal-glass-gold {
+  background: linear-gradient(135deg, rgba(41, 21, 54, 0.75) 0%, rgba(16, 16, 20, 0.9) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(231, 199, 122, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(118, 80, 200, 0.15), inset 0 0 12px rgba(231, 199, 122, 0.1);
+}
+
+.cosmic-glow-gold {
+  box-shadow: 0 0 25px rgba(231, 199, 122, 0.25), 0 0 50px rgba(118, 80, 200, 0.2);
+}
+
+.cosmic-glow-purple {
+  box-shadow: 0 0 25px rgba(118, 80, 200, 0.35), 0 0 60px rgba(41, 21, 54, 0.4);
+}
+
+.nebula-gradient {
+  background: radial-gradient(circle at 50% 20%, rgba(118, 80, 200, 0.25) 0%, rgba(41, 21, 54, 0.4) 45%, rgba(16, 16, 20, 0.95) 85%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF1CC 0%, #E7C77A 50%, #C49C48 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.purple-gradient-text {
+  background: linear-gradient(135deg, #E2D4FF 0%, #9A72F6 50%, #7650C8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #101014;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #291536;
+  border-radius: 9999px;
+  border: 1px solid rgba(118, 80, 200, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7650C8;
+}
+
+/* Animated Shimmer / Pulse */
+@keyframes celestial-orbit {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes nebula-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.04); }
+}
+
+.animate-orbit {
+  animation: celestial-orbit 40s linear infinite;
+}
+
+.animate-orbit-reverse {
+  animation: celestial-orbit 30s linear infinite reverse;
+}
+
+.animate-nebula {
+  animation: nebula-pulse 8s ease-in-out infinite;
+}
+
+.animate-nebula-delayed {
+  animation: nebula-pulse 8s ease-in-out 4s infinite;
+}
+
+@keyframes starlight-twinkle {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
